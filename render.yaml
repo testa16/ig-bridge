@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: renko-webhook
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --timeout 60
+    disk:
+      name: tradelog
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: WEBHOOK_SECRET
+        sync: false
+      - key: IG_API_KEY
+        sync: false
+      - key: IG_USERNAME
+        sync: false
+      - key: IG_PASSWORD
+        sync: false
+      - key: IG_ACCOUNT_ID
+        sync: false
+      - key: IG_EPIC_GER40
+        value: IX.D.DAX.DAILY.IP
+      - key: IG_BASE
+        value: https://demo-api.ig.com/gateway/deal
+      - key: LOG_DIR
+        value: /var/data

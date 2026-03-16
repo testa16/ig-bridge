@@ -21,7 +21,7 @@ IG_EPIC_GER40 = os.environ.get("IG_EPIC_GER40", "IX.D.DAX.DAILY.IP")  # DAX Demo
 # Live: https://api.ig.com/gateway/deal
 IG_BASE = os.environ.get("IG_BASE", "https://demo-api.ig.com/gateway/deal")
 
-LOG_DIR  = os.environ.get("LOG_DIR", "/var/data")
+LOG_DIR  = os.environ.get("LOG_DIR", "/tmp")
 LOG_PATH = os.path.join(LOG_DIR, "trades.jsonl")
 
 

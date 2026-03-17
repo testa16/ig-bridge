@@ -15,7 +15,7 @@ IG_API_KEY    = os.environ.get("IG_API_KEY", "")
 IG_USERNAME   = os.environ.get("IG_USERNAME", "")
 IG_PASSWORD   = os.environ.get("IG_PASSWORD", "")
 IG_ACCOUNT_ID = os.environ.get("IG_ACCOUNT_ID", "")
-IG_EPIC_GER40 = os.environ.get("IG_EPIC_GER40", "IX.D.DAX.DAILY.IP")  # DAX Demo Epic
+IG_EPIC_GER40  = os.environ.get("IG_EPIC_GER40", "") # DAX Demo Epic
 
 # Demo: https://demo-api.ig.com/gateway/deal
 # Live: https://api.ig.com/gateway/deal
